@@ -5,13 +5,23 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    const hemisferio = prompt(`Informe o hemisfério que você está:`)
+    const mes= prompt (`Informe o mês atual:`)
 
-
-    //PROCESSAMENTO
-
+    if ((hemisferio == `norte`) && (mes == `julho` || mes == `agosto` || mes == `setembro`)){
+        alert (`Verão`)
+    }
     
-    //SAÍDA
+    else if ((hemisferio == `norte`) && (mes == `outubro`|| mes == `novembro` || mes == `dezembro`)) {
+        alert (`Outono`)
+    }
 
+    else if ((hemisferio == `norte`) && (mes == `janeiro` || mes == `fevereiro` || mes == `março`)) {
+        alert (`Inverno`)
+    }
 
-</script>
+    else ((hemisferio == `norte`) && (mes == `abril` || mes ==  `maio` ))
+    {
+        alert (`Primavera`)
+    }
+    </script>
