@@ -7,13 +7,55 @@
     - inteiro ou decimal.
     */
 
-    //ENTRADA
+    constNumero1 = Number(prompt(`Insira um número:`).trim().replace(",", "."));
+    constNumero2 = Number(prompt(`Insira outro número:`).trim().replace(",", "."));
+    constOperacao = prompt(`Insira qual operação deseja utilizar: M para multiplicação, D para Divisão, S para Subtração e A para adição.`).toUpperCase()
+
+    let = 0
+
+    if (constOperacao == "M") {
+        resultado = constNumero1 * constNumero2;
+        alert(`${resultado.toFixed(1).replace(".", ",")}`)
+
+    }
+    else if (constOperacao == "D") {
+        resultado = constNumero1 / constNumero2
+        alert(`${resultado.toFixed(1).replace(".", ",")}`)
+
+    }
+    else if (constOperacao == "S") {
+        resultado = constNumero1 - constNumero2
+        alert(`${resultado.toFixed(1).replace(".", ",")}`)
 
 
-    //PROCESSAMENTO
+    }
+    else if (constOperacao == "A") {
+        resultado = constNumero1 + constNumero2
+        alert(`${resultado.toFixed(1).replace(".", ",")}`)
 
-    
-    //SAÍDA
+    }
 
-
+    if (constOperacao == "M" || constOperacao == "D" || constOperacao == "S" || constOperacao == "A") {
+        if (resultado % 2 != 0) {
+            alert(`O número é ímpar!`);
+        }
+        else {
+            alert(`O número é par!`);
+        }
+        if (resultado > 0) {
+            alert(`O número é positivo!`);
+        }
+        else {
+            alert(`O número é negativo!`);
+        }
+        if (resultado % 1 > 0) {
+            alert(`O número é decimal!`);
+        }
+        else {
+            alert(`O número é inteiro!`);
+        }
+    }
+    else {
+        alert(`Operação Inválida!`);
+    }
 </script>
